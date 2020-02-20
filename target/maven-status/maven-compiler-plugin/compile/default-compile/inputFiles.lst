@@ -1,0 +1,11 @@
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/model/SampleResponse.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/processor/SampleProcessor.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/module/DI.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/module/SampleModule.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/manager/CamelManger.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/manager/RouteManager.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/resource/SampleResource.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/router/SampleRoute.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/config/AppConfig.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/app/ACApplication.java
+/Users/ashish.ambastha/repos/apache-camel-poc/src/main/java/com/flipkart/apache/camel/model/SampleRequest.java

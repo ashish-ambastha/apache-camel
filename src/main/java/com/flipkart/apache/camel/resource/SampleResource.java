@@ -37,4 +37,13 @@ public class SampleResource {
     public SampleResponse getSampleResponse(SampleRequest sampleRequest) throws Exception{
         return routeManager.getSampleResponse(sampleRequest);
     }
+
+    @POST
+    @Path("/poc/mp")
+    @Timed
+    @ExceptionMetered
+    @ApiOperation(value = "CreatePayment", tags = "v2", response = SampleResponse.class)
+    public SampleResponse getMPSampleResponse(SampleRequest sampleRequest) throws Exception{
+        return routeManager.getMultiProcessorSampleResponse(sampleRequest);
+    }
 }

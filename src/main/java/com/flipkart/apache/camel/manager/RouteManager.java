@@ -19,8 +19,11 @@ public class RouteManager {
 
     public SampleResponse getSampleResponse(SampleRequest sampleRequest) throws Exception {
         ProducerTemplate template = camelContext.createProducerTemplate();
-        SampleResponse response = (SampleResponse) template.sendBody("direct:GetData", ExchangePattern.InOut, sampleRequest);
-        System.out.println("Returning response : ");
-        return response;
+        return (SampleResponse) template.sendBody("direct:GetData", ExchangePattern.InOut, sampleRequest);
+    }
+
+    public SampleResponse getMultiProcessorSampleResponse(SampleRequest sampleRequest) {
+        ProducerTemplate template = camelContext.createProducerTemplate();
+        return (SampleResponse) template.sendBody("direct:GetMPData", ExchangePattern.InOut, sampleRequest);
     }
 }

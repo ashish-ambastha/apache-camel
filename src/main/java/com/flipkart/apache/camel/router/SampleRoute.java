@@ -1,6 +1,6 @@
 package com.flipkart.apache.camel.router;
 
-import com.flipkart.apache.camel.model.SampleResponse;
+import com.flipkart.apache.camel.model.api.SampleResponse;
 import com.flipkart.apache.camel.processor.SampleProcessor;
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;

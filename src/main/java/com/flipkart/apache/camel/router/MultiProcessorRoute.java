@@ -1,7 +1,6 @@
 package com.flipkart.apache.camel.router;
 
-import com.flipkart.apache.camel.model.SampleRequest;
-import com.flipkart.apache.camel.model.SampleResponse;
+import com.flipkart.apache.camel.model.api.SampleResponse;
 import com.flipkart.apache.camel.processor.SampleProcessor;
 import com.flipkart.apache.camel.processor.SampleResponseProcessor;
 import com.google.inject.Inject;

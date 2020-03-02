@@ -1,6 +1,7 @@
 package com.flipkart.apache.camel.adaptor;
 
 import com.flipkart.apache.camel.model.api.InitiateResponse;
+import com.flipkart.apache.camel.model.service.InitiateRequest;
 
 public class InitiateResponseAdaptor {
 

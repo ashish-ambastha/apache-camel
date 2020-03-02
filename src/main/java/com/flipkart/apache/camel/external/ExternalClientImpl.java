@@ -16,13 +16,12 @@ public class ExternalClientImpl implements ExternalClient {
 
     public SandboxServerResponse getInitiateResponse(SandboxServerRequest serverRequest) {
         OkHttpClient client = new OkHttpClient();
-        Request.Builder requestBuilder = new Request.Builder().url("http://localhost:1234/1.0/payment/camel/poc/test");
-        requestBuilder.post(RequestBody.create(JSON, serverRequest.toString()));
-        Request request = requestBuilder.build();
-
+        Request.Builder requestBuilder = new Request.Builder().url("http://127.0.0.1:1234/aco/1.0/payment/camel/poc/test");
         SandboxServerResponse sandboxServerResponse = null;
-
         try {
+            requestBuilder.post(RequestBody.create(JSON, new ObjectMapper().writeValueAsString(serverRequest)));
+            Request request = requestBuilder.build();
+
             String responseBody;
             okhttp3.Response response = client.newCall(request).execute();
             int responseCode = response.code();

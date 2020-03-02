@@ -66,11 +66,11 @@ public class SampleResource {
     @Timed
     @ExceptionMetered
     @ApiOperation(value = "Test", tags = "v1", response = SandboxServerResponse.class)
-    public SandboxServerResponse initiate(SandboxServerRequest initiateRequest) {
+    public SandboxServerResponse getSandboxResponse(SandboxServerRequest initiateRequest) {
         SandboxServerResponse sandboxServerResponse = new SandboxServerResponse();
         sandboxServerResponse.setResponseCode("SUCCESS");
         sandboxServerResponse.setResponseStatus("SUCCESS");
-        sandboxServerResponse.setTransactionId("PZT1");
+        sandboxServerResponse.setTransactionId(initiateRequest.getTransactionId());
         sandboxServerResponse.setTransactionRefId("REF1");
         return sandboxServerResponse;
     }

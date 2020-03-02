@@ -1,7 +1,6 @@
 package com.flipkart.apache.camel.processor;
 
-import com.flipkart.apache.camel.model.SampleRequest;
-import com.flipkart.apache.camel.model.SampleResponse;
+import com.flipkart.apache.camel.model.api.SampleResponse;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 

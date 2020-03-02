@@ -1,19 +1,19 @@
 package com.flipkart.apache.camel.manager;
 
-import com.flipkart.apache.camel.model.SampleRequest;
-import com.flipkart.apache.camel.model.SampleResponse;
+import com.flipkart.apache.camel.model.api.SampleRequest;
+import com.flipkart.apache.camel.model.api.SampleResponse;
 import com.google.inject.Inject;
 import org.apache.camel.CamelContext;
 import org.apache.camel.ExchangePattern;
 import org.apache.camel.ProducerTemplate;
 
 
-public class RouteManager {
+public class TestRouteManager {
 
     private CamelContext camelContext;
 
     @Inject
-    public RouteManager(CamelContext camelContext) {
+    public TestRouteManager(CamelContext camelContext) {
         this.camelContext = camelContext;
     }
 
@@ -26,4 +26,5 @@ public class RouteManager {
         ProducerTemplate template = camelContext.createProducerTemplate();
         return (SampleResponse) template.sendBody("direct:GetMPData", ExchangePattern.InOut, sampleRequest);
     }
+
 }

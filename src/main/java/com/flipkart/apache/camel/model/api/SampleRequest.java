@@ -1,7 +1,12 @@
-package com.flipkart.apache.camel.model;
+package com.flipkart.apache.camel.model.api;
 
-public class SampleResponse {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class SampleRequest {
+
+    @JsonProperty("number")
     private int number;
+    @JsonProperty("name")
     private String name;
 
     public int getNumber() {

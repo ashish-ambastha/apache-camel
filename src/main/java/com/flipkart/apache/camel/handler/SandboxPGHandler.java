@@ -14,6 +14,6 @@ public class SandboxPGHandler implements PGHandler {
 
     public InitiateResponse initiate(InitiateRequest initiateRequest) {
         ProducerTemplate template = camelContext.createProducerTemplate();
-        return (InitiateResponse) template.sendBody("direct:initiate", ExchangePattern.InOut, initiateRequest);
+        return (InitiateResponse) template.sendBody("direct:initiateIR", ExchangePattern.InOut, initiateRequest);
     }
 }

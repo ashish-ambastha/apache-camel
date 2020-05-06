@@ -1,7 +1,7 @@
 package com.flipkart.apache.camel.router;
 
 import com.flipkart.apache.camel.external.ExternalClient;
-import com.flipkart.apache.camel.processor.initiate.sandbox.ExternalRequestProcessor;
+import com.flipkart.apache.camel.processor.initiate.sandbox.IdempotentRequestProcessor;
 import com.flipkart.apache.camel.processor.initiate.sandbox.ParseResponseProcessor;
 import com.flipkart.apache.camel.processor.initiate.sandbox.ServerRequestAdapterProcessor;
 import com.google.inject.Inject;
@@ -15,7 +15,7 @@ public class InitiateRequestRoute extends RouteBuilder {
     public void configure() throws Exception {
         from("direct:initiate")
                 .process(new ServerRequestAdapterProcessor())
-                .process(new ExternalRequestProcessor(externalClient))
+                .process(new IdempotentRequestProcessor(externalClient))
                 .process(new ParseResponseProcessor())
                 .end();
     }
